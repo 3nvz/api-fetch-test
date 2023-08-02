@@ -9,13 +9,12 @@ function Practice() {
 
     const [post, setPost] = useState([]);
     const [state, setState] = useState('');
-    // const [pokemon, setPokemon] = useState({});
 
+    //Fetch data from API limit to 500 Pokemon and save them in 'post' state array
     useEffect(() => {
         axios.get('https://pokeapi.co/api/v2/pokemon?offset=500&limit=500')
             .then(response => {
                 setPost(response.data.results);
-                // console.log(response.data.results);
             })
             .catch(error => {
                 console.log(error);
@@ -27,20 +26,19 @@ function Practice() {
         setState(e.target.value);
     }
 
-    const filteredData = post.filter((po) =>
-        po.name.toLowerCase().includes(state.toLowerCase())
+    //Filter 'post' array after the 'state' variable input
+    const filteredData = post.filter((poke) =>
+        poke.name.toLowerCase().includes(state.toLowerCase())
     );
 
     return (
         <div className='poke-and-search-container'>
             <div className='poke-searchbar'>
                 <input type='text' value={state} onChange={handleFilter} placeholder='Search for your Pokemon' />
-                {/* <div className='water-checkbox'>
-                    <input type='checkbox' id='water' />
-                    <label for='water'>Water</label>
-                </div> */}
+                {/* Put Buttons here */}
             </div>
 
+            {/* Display data in a 3 column grid, fetching data from the API using the Pokemon name */}
             <div className='grid-container'>
                 {filteredData.map((pokemon, index) => (
                     <Pokemon key={index} pokemon={pokemon.name} className='grid-item' />

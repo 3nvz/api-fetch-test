@@ -5,8 +5,9 @@ import axios from 'axios';
 function Pokemon({ pokemon }) {
 
     const [specificPokemon, setSpecificPokemon] = useState({});
-    // const [state, setState] = useState('');
 
+    //Fetch data from Pokemon API according Pokemon name which was given by the 'Practice' class
+    //Save listed attributes in a state variable as object
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
             .then(response => {
@@ -25,16 +26,13 @@ function Pokemon({ pokemon }) {
     })
 
     return (
-
-
-
         <div className='poke'>
             <div className='poke-descr'>
                 <h1>{specificPokemon.name}</h1>
-                <p>HP: {specificPokemon.hp}</p>
-                <p>Attack: {specificPokemon.attack}</p>
-                <p>Defense: {specificPokemon.defense}</p>
-                <p>Type: {specificPokemon.type}</p>
+                <p><span>HP:</span> {specificPokemon.hp}</p>
+                <p><span>Attack:</span> {specificPokemon.attack}</p>
+                <p><span>Defense:</span> {specificPokemon.defense}</p>
+                <p className={` ${specificPokemon.type} poke-type-container`}>{specificPokemon.type}</p>
             </div>
             <div className='poke-img'>
                 <img src={specificPokemon.img} alt='pokemon' />

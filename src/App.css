@@ -15,10 +15,11 @@
 .body {
   padding: 140px 50px;
 }
+
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* Three equal-width columns */
-  gap: 10px; /* Adjust the gap between grid items as needed */
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 }
 
 
@@ -31,6 +32,7 @@
   border: 1px solid rgba(0, 0, 0, 0.281);
   border-radius: 5px;
   transition: 0.3s ease-in-out;
+  background-color: rgb(245, 245, 245);
 
 }
 
@@ -41,13 +43,22 @@
 
 .poke-descr>p {
   font-size: 18px;
+  margin: 2px 0;
+}
+
+.poke-descr>p:nth-child(4) {
+  margin-bottom: 30px;
+}
+
+.poke-descr>p>span {
+  font-weight: bold;
 }
 
 .poke-img>img {
   width: 250px;
   height: 250px;
   position: absolute;
-  margin-left: -90px;
+  margin-left: -110px;
 }
 
 .poke:hover {
@@ -70,4 +81,91 @@
   height: 30px;
   font-size: 18px;
   border-radius: 5px;
+}
+
+/* POKE TYPE CONTAINER */
+
+.poke-type-container {
+  color: white;
+  font-weight: bold;
+  width: 90px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 35px;
+}
+
+/* POKE TYPES */
+
+.water {
+  background-color: #6390F0;
+}
+
+.normal {
+  background-color: #A8A77A;
+}
+
+.dark {
+  background-color: #705746;
+}
+
+.grass {
+  background-color: #7AC74C;
+}
+
+.fire {
+  background-color: #EE8130;
+}
+
+.psychic {
+  background-color: #F95587;
+}
+
+.rock {
+  background-color: #B6A136;
+}
+
+.electric {
+  background-color: #F7D02C;
+}
+
+.ground {
+  background-color: #E2BF65;
+}
+
+.fighting {
+  background-color: #C22E28;
+}
+
+.bug {
+  background-color: #A6B91A;
+}
+
+.ghost {
+  background-color: #735797;
+}
+
+.poison {
+  background-color: #A33EA1;
+}
+
+.ice {
+  background-color: #96D9D6;
+}
+
+.steel {
+  background-color: #B7B7CE;
+}
+
+.dragon {
+  background-color: #6F35FC;
+}
+
+.fairy {
+  background-color: #D685AD;
+}
+
+.flying {
+  background-color: #A98FF3;
 }
