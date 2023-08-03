@@ -36,6 +36,7 @@ function Practice() {
             <div className='poke-searchbar'>
                 <input type='text' value={state} onChange={handleFilter} placeholder='Search for your Pokemon' />
                 {/* Put Buttons here */}
+                <button>water</button>
             </div>
 
             {/* Display data in a 3 column grid, fetching data from the API using the Pokemon name */}
