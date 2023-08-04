@@ -14,7 +14,7 @@ To run the Poke API app locally, follow these steps:
 
 1. Clone the repository to your local machine.
    
-   git clone https://github.com/your-username/poke-api-app.git
+   git clone https://github.com/your-username/pokemon-api-project.git
 
 2. Navigate to the project directory.
 
