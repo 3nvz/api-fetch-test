@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import Pokemon from './Pokemon';
+
 
 
 
@@ -9,6 +10,7 @@ function Practice() {
 
     const [post, setPost] = useState([]);
     const [state, setState] = useState('');
+    const scrollToRef = useRef(null);
 
     //Fetch data from API limit to 500 Pokemon and save them in 'post' state array
     useEffect(() => {
@@ -31,12 +33,19 @@ function Practice() {
         poke.name.toLowerCase().includes(state.toLowerCase())
     );
 
+    //Scroll up to the input field onclick
+    const handleScrollClick = () => {
+        if (scrollToRef.current) {
+            scrollToRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <div className='poke-and-search-container'>
+
+        <div className='poke-and-search-container' ref={scrollToRef}>
             <div className='poke-searchbar'>
                 <input type='text' value={state} onChange={handleFilter} placeholder='Search for your Pokemon' />
-                {/* Put Buttons here */}
-                <button>water</button>
+                <button className='scrollUp-btn' onClick={handleScrollClick}>Scroll to the top</button>
             </div>
 
             {/* Display data in a 3 column grid, fetching data from the API using the Pokemon name */}

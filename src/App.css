@@ -75,12 +75,32 @@
   margin-right: 200px;
 }
 
+.poke-searchbar>input {
+  margin-top: 50%;
+  text-align: center;
+  align-items: center;
+}
 
 .poke-searchbar>input {
   width: 290px;
   height: 30px;
   font-size: 18px;
   border-radius: 5px;
+}
+
+.scrollUp-btn {
+  font-size: 18px;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(63, 58, 58);
+  border-radius: 35px;
+  position: fixed;
+  left: 0;
+  margin-left: 35px;
+  bottom: 0;
 }
 
 /* POKE TYPE CONTAINER */
