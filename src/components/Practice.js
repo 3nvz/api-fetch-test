@@ -44,6 +44,7 @@ function Practice() {
 
         <div className='poke-and-search-container' ref={scrollToRef}>
             <div className='poke-searchbar'>
+                <label>Search for a Pokemon</label>
                 <input type='text' value={state} onChange={handleFilter} placeholder='Search for your Pokemon' />
                 <button className='scrollUp-btn' onClick={handleScrollClick}>Scroll to the top</button>
             </div>

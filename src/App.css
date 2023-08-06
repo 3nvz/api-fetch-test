@@ -75,8 +75,13 @@
   margin-right: 200px;
 }
 
+.poke-searchbar>label {
+  font-size: 28px;
+  font-weight: bold;
+}
+
 .poke-searchbar>input {
-  margin-top: 50%;
+  margin-top: 15px;
   text-align: center;
   align-items: center;
 }
