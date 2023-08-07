@@ -45,6 +45,7 @@ To run the Poke API app locally, follow these steps:
 
 - React: JavaScript library for building user interfaces.
 - Axios: Promise-based HTTP client for making API requests.
+- HTML, CSS
 
 ## Acknowledgments
 
