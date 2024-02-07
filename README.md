@@ -1,6 +1,6 @@
-# Poke API App
+# API App Test
 
-This is a simple Poke API app that fetches data from the Poke API and displays it in a 3-column grid. The app also features a search bar that allows you to update the grid dynamically according to the search term. The primary goal of this project was to practice fetching data from an API, and the design or UI were intentionally kept minimal.
+This is a simple API app that fetches data from the Poke API and displays it in a 3-column grid. The app also features a search bar that allows you to update the grid dynamically according to the search term. The primary goal of this project was to practice fetching data from an API, and the design or UI were intentionally kept minimal.
 
 ## Features
 
